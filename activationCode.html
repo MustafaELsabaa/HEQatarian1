@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link href='css/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Optional theme -->
+
+    <!-- Latest compiled and minified JavaScript -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+
+</head>
+
+<body class="Home_page BeforeLogin">
+    <main class="Login_page bg-grey">
+        <div class="d-flex justify-content-center">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="ActivationCodeTitle">مرحبا بك
+                        </h6>
+
+                    </div>
+                    <div class="modal-body">
+                        <img class="text-center mx-auto display-block" src="img/moe-logo.png">
+                        <h5 class="mt-3 text-center fg-primary" id="ActivationCodeTitle">تسجيل مستخدم جديد
+                        </h5>
+                        <form>
+                            <div class="form-group ">
+                                <label class="required form-label full_width  text-right"> أدخل كود التفعيل </label>
+                                <input class=" form-control" type="email">
+                                <small id="emailHelp" class="form-text text-mute  full_width  text-rightd">لقد تم إرسال رسالة بكود التفعيل على الهاتف والبريد الالكتروني الخاص بكم</small>
+                                <small class="mt-4 display-block"> <a href="#a" class=" fg-primary form-text full_width font-small text-right"> اضغط هنا لاعادة إرسال كود التحقق  </a></small>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container">
+                            <div class="row">
+                                <a href="Login.html" type="button" class="bbtn default-btn btn-block float-left">رسالة تأكيد انشاء الحساب</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="Js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+
+
+    <script src="js/Custom.js"></script>
+    <script>
+        $(function() {
+            $("#datepicker").datepicker({
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+</body>
+
+</html>

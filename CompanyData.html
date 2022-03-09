@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="DataTables/datatables.min.css" />
+    <link href='css/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+
+    <!-- Optional theme -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+    <!-- <script src="Js/jquery-3.4.1.slim.min.js"></script> -->
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row margin-top-15 ">
+                <div class="col-12 text-left">
+                    <nav class="navbar navbar-expand-lg toaddwithwelcome">
+                        <a class="navbar-brand" href="#"><span class="Welcome_Dear align-text-bottom text-white">Welcome Ahmed</span></a>
+                        <a title="الخروج من الموقع" data-toggle="tooltip" class=" float-left btn btn-black fg-white" href="addingRequest.html">
+                            <i class="fa fa-user"></i> الخروج من الموقع</a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="moe-logo" href="#"><img class=" logo" src="img/moe-logo.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="lang-btn">
+                    <input type="hidden" name="ctl00$ctl75$hdnVarLabel" id="ctl00_ctl75_hdnVarLabel" value="en">
+                    <a id="ctl00_ctl75_lnkbtn_Language" class="lang font-weight-bold fg-black test" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl75$lnkbtn_Language&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">English</a>
+
+                </li>
+                <li class="access-icons flex-display">
+                    <a class="access-theme fg-white" onclick="inverseColors();return false">
+                    </a>
+                    <a class="decrease-font fg-white" onclick="decreaseFont();return false">
+
+                    </a>
+                    <a class="main-font fg-white" onclick="setdefaultFont();return false">
+
+                    </a>
+                    <a class="increase-font fg-white" onclick="increaseFont();return false">
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <main>
+        <div class="container-fluid  mb-5 bg-white height-100">
+
+            <div class="container-fluid bg-white height-100">
+                <div class="row tabs">
+                    <div class="col-12 no-padding">
+                        <div class="row text-center pr-5 pt-5">
+                            <div class="col-3 no-padding">
+                                <ul class="nav nav-pills nav-stacked flex-column">
+                                    <li class="Home">
+                                        <i class=" fg-red fa fa-angle-double-right" aria-hidden="true"></i>
+                                        <a href="#tab_a" class="fg-red">العودة إللى اللوحة الرئيسية </a>
+
+                                    </li>
+
+
+                                    <li class="active"><a href="RequestData.html">بيانات الطلب</a>
+                                    </li>
+                                    <li><a href="FeasibilityStudy.html">دراسة الجدوى</a>
+                                    </li>
+                                    <li><a href="AnnouncementAcceptanceStudents.html">الإعلان وقبول الطلاب</a>
+                                    </li>
+                                    <li><a href="Issuancelicense.html">إصدار الرخصة </a>
+                                    </li>
+                                    <!-- <li><a href="ClarificationData.html">طلبات التوضيح</a>
+                                    </li>
+
+                                    <li><a href="HistoryData.html">السجل التاريخي</a>
+                                    </li>
+                                    <li class="hasUl"><a href="Measures.html">الإجراءات</a>
+                                        <ul class="nav nav-pills nav-stacked flex-column">
+                                            <li><a>إجراء جديد</a></li>
+                                            <li><a>توصية </a></li>
+                                            <li><a>طلبات التوضيح</a></li>
+                                        </ul>
+                                    </li>
+                             <li><a href="FeasibilityStudy.html">دراسة الجدوى</a>
+                                    </li>
+                                    <li><a href="AnnouncementAcceptanceStudents.html">الإعلان وقبول الطلاب</a>
+                                    </li>
+                                    <li><a href="Issuancelicense.html">إصدار الرخصة </a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="col-9">
+                                <div class="tab-content">
+                                    <div class="tab-pane active " id="tab_a">
+                                        <h3>بيانات المؤسسة المطلوبة</h3>
+                                        <div class="container-fluid">
+                                            <div class="row pt-4">
+                                                <div class="col-6">
+                                                    <label> رقم  الطلب :  </label>
+                                                    <span> 125</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label> إسم المؤسسة المقترح   :  </label>
+                                                    <span> القطرية الخاصة</span>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-6">
+                                                    <label> نوع المؤسسة    :  </label>
+                                                    <span> تعليم عالي</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label> مقر المؤسسة   :  </label>
+                                                    <span>  الدفنة-الدوحة-قطر</span>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-6">
+                                                    <label> إسم مقدم الطلب     :  </label>
+                                                    <span>مصطفى ابراهيم عمر السبع </span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label>  البريد الإلكتروني   :  </label>
+                                                    <span> <a href="mailto:Email@homail.com">Email@hotmail.com</a></span>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-6">
+                                                    <label> الرقم الشخصي القطري   :  </label>
+                                                    <span> 01123542245547789 ق م</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label> مرحلة الطلب    :  </label>
+                                                    <span> القرار النهائي  </span>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-4">
+                                                <div class="col-6">
+                                                    <label> ملف تعريفي     :  </label>
+                                                    <span><a href="#a">فتح الملف</a></span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label>حالة الطلب   :  </label>
+                                                    <span> مغلق بالرفض</span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row position-relative border-top-red pt-4 pb-5">
+                                                <h5 class="text-left"> بيانات الجامعة الشريكة</h5>
+                                                <div class="col-12 ">
+                                                    <div class="container-fluid">
+                                                        <table class="dataTable table-responsive table-striped border nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>إسم المؤسسة الشريكة </th>
+                                                                    <th>نوع المؤسسة</th>
+                                                                    <th>دولة المقر الرئيسي</th>
+                                                                    <th>الهاتف </th>
+                                                                    <th>العنوان</th>
+                                                                    <th>ملف تعريفي</th>
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>التعليم العالي</td>
+                                                                    <td> مساهمة</td>
+                                                                    <td> كوالالمبور </td>
+                                                                    <td> 02232545202 </td>
+
+                                                                    <td> الدفنة-الدوحة-قطر</td>
+                                                                    <td><a href="#a " class=" btn btn-outline"> تحميل الملف</a></td>
+
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-5 pb-5 position-relative border-top-red">
+                                                <h5 class="text-left "> بيانات المستثمرين الأفراد </h5>
+                                                <div class="col-12 ">
+                                                    <table class="dataTable  table-striped table-responsive border nowrap" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>إسم المستثمر </th>
+                                                                <th>البريد الالكتروني </th>
+                                                                <th>الرقم الشخصي </th>
+                                                                <th>الهاتف </th>
+                                                                <th>الجنسية </th>
+                                                                <th>عن أعمال المستثمر </th>
+                                                                <th>شهادة السلوك </th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>مصطفى السبع</td>
+                                                                <td>
+                                                                    <a href="mailto:mostafa@Moassa.com">mostafa@Moassa.com</a>
+                                                                </td>
+                                                                <td>0212565989854897 </td>
+                                                                <td>0222222258</td>
+                                                                <td>قطري</td>
+                                                                <td><a href="#a" class="btn btn-outline"> تحميل النبذة </a></td>
+                                                                <td><a href="#a" class="btn btn-outline">تحميل </a></td>
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-5 pb-5 position-relative border-top-red">
+                                                <h5 class="text-left "> بيانات المستثمرين المؤسسات </h5>
+                                                <div class="col-12 ">
+                                                    <table class="dataTable  table-striped table-responsive border nowrap" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>إسم المؤسسة </th>
+                                                                <th>النوع </th>
+                                                                <th>دولة المقر </th>
+                                                                <th>البريد </th>
+                                                                <th>الهاتف </th>
+                                                                <th>رقم السجل</th>
+                                                                <th>العنوان </th>
+                                                                <th>نبذه عن المؤسسة </th>
+                                                                <th>ملف تعريفي </th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>اليونسكو</td>
+                                                                <td> صحية</td>
+                                                                <td>USA</td>
+                                                                <td>
+                                                                    <a href="mailto:info@edu.gov.qa ">info@edu.gov.qa </a>
+                                                                </td>
+                                                                <td>089854897 </td>
+                                                                <td>897 </td>
+                                                                <td> الدفنة-الدوحة-قطر</td>
+
+                                                                <td><a href="#a" class="btn btn-outline"> تحميل النبذة </a></td>
+                                                                <td><a href="#a" class="btn btn-outline">تحميل </a></td>
+
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+                                            <div class="row pt-5 pb-5 position-relative border-top-red">
+                                                <h5 class="text-left "> بيانات الكليات والبرامج المطلوبة </h5>
+                                                <div class="col-12 ">
+                                                    <table class="datatable table-striped table-responsive border nowrap" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>إسم البرنامج </th>
+                                                                <th> وصف الطلب </th>
+                                                                <th>إسم الكلية </th>
+                                                                <th>المستوى العلمي</th>
+                                                                <th>التخصص </th>
+                                                                <th>مدة الدراسة</th>
+                                                                <th>ملف تعريفي</th>
+
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>محاسبة</td>
+                                                                <td> التحاق</td>
+                                                                <td>تجارة </td>
+                                                                <td>بكالريوس</td>
+                                                                <td>محاسبة</td>
+                                                                <td>شهرين</td>
+                                                                <td><a href="#a" class=" btn btn-outline">تحميل </a></td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-5 pb-5 position-relative border-top-red">
+                                                <h5 class="text-left "> بيانات الكليات والبرامج المطلوبة </h5>
+                                                <div class="col-6 ">
+                                                    <table class="datatable table-striped full-width table-responsive  nowrap" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>إسم المرفق </th>
+                                                                <th> الرابط</th>
+                                                                <th>تاريخ الإضافة </th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>حماده</td>
+                                                                <td> <a href="#a">تحميل</a></td>
+                                                                <td><a href="#a">تاريخ / وقت</a></td>
+
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="col-6 position-relative">
+                                                    <a href="#a" class="btn  bottom-left default-btn"> رجوع لشاشة الطلبات</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+
+    <footer class="he-footer page-padding">
+        <div class="lg-footer row margin-top-15 flex-display">
+            <div class="col-1">
+                <h2 class="title text-right">
+                    اتصل بنا
+                </h2>
+            </div>
+            <div class="col-5 no-padding">
+
+
+                <ul class="address text-right no-padding">
+
+                    <li>
+                        <a href="#">
+                            <span>
+                                <i class="fa fa-map-marker" aria-hidden="true">
+                                </i>
+                                الدفنة-الدوحة-قطر
+                            </span>
+                        </a>
+                    </li>
+                    <li class=" text-right number-font">
+                        <span>
+                            <i class="fa fa-envelope-open" aria-hidden="true"></i>P.O. Box 3511
+                        </span>
+                    </li>
+                </ul>
+                <ul class="phones no-padding">
+                    <li class="number-font">
+                        <a href="tel:155">
+                            <span>
+                                <span class="fa">
+                                    <img src="img/hotline.png">
+                                </span> 155 </span>
+                        </a>
+                    </li>
+                    <li class="number-font">
+                        <a href="tel:44044444">
+                            <span>
+                                <i class="fa fa-phone" aria-hidden="true">
+                                </i> 44044444
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="email no-padding no-border">
+                    <li class="number-font">
+                        <a href="tel:44044586">
+                            <span>
+                                <i class="fa fa-fax" aria-hidden="true">
+                                </i> 44044586
+                            </span>
+                        </a>
+                    </li>
+                    <li class="number-font">
+                        <a href="mailto:info@edu.gov.qa">
+                            <span>
+                                <i class="fa fa-envelope-o" aria-hidden="true">
+                                </i> info@edu.gov.qa
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 no-padding">
+                <ul class="links no-padding no-border no-margin">
+                    <li>
+                        <a href="Site Map" class="">  خريطة الموقع </a>
+                    </li>
+
+                    <li>
+                        <a href="اسئلة متكررة" class="">
+                            اسئلة متكررة
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-1 no-padding">
+                <h3 class="title">
+                    إتبعنا </h3>
+            </div>
+            <div class="col-2 no-padding">
+                <div class="flex-display followCopy">
+                    <div class=" text-right">
+                        <ul class="follow-us no-padding no-margin">
+                            <li class="youtube">
+                                <a href="https://www.youtube.com/user/secqatar123/">
+                                    <i class="fa fa-youtube" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="facebook">
+                                <a href="https://business.facebook.com/Qatar.edu/">
+                                    <i class="fa fa-facebook" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/Qatar_edu">
+                                    <i class="fa fa-twitter" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="instagram">
+                                <a href="https://www.instagram.com/Qatar_edu/">
+                                    <i class="fa fa-instagram" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="linkedin">
+                                <a href="https://in.linkedin.com/company/qatar_edu">
+                                    <i class="fa fa-linkedin" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="margin-top-15 copy-right text-right">
+                        <h3>
+                            © حقوق النشر محفوظة 2020
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="Js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+
+
+    <script src="js/Custom.js"></script>
+    <script src="http://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+
+    <!-- <script type="text/javascript " src="DataTables/datatables.min.js "></script> -->
+
+    <script src="js/Custom.js "></script>
+    <script>
+        var table = $('.DataTable').DataTable({
+            responsive: true,
+            scrollY: "300px",
+            scrollX: true,
+            scrollCollapse: true,
+            paging: true,
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

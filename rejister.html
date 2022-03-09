@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link href='css/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Optional theme -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <link rel="shortcut icon" href="http://example.com/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+
+</head>
+
+<body class="Home_page BeforeLogin">
+    <main class="Login_page bg-grey">
+        <div class="d-flex  justify-content-center ">
+
+            <div class="col-sm-12 col-lg-10  align-items-center flex-columnalign-items-center flex-column">
+                <div class="formContainer  align-items-center bg-white ">
+                    <img class="text-center mx-auto display-block" src="img/moe-logo.png" />
+                    <h2 class="text-center mt-5 mb-5 fg-primary display-block">تسجيل مستخدم جديد مرحبا بك
+                    </h2>
+                    <div class="row">
+                        <div class="col-12  text-right">
+                            <h2 class="registeration_restriactions_h2 text-right fg-primary"> تعليمات التسجيل</h2>
+                            <button class="Restrications" data-toggle="collapse" data-target="#Rest"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <i class="fa fa-angle-up" aria-hidden="true"></i></button>
+
+                            <div id="Rest" class="collapse">
+
+                                <p class="font-weight-bold required"> أدخل الرقم الشخصي القطري المكون من 11 رقم بدون مسافات</p>
+                                <p class="font-weight-bold required"> البريد الإلكتروني ورقم الهاتف هما وسيلة الاتصال الاساسية بعد التفعيل لذا يرجى التأكد من صحتهما </p>
+                                <p class="font-weight-bold required"> البريد الإلكتروني ورقم الهاتف هما وسيلة الاتصال الاساسية بعد التفعيل لذا يرجى التأكد من صحتهما </p>
+                                <p class="font-weight-bold required"> البريد الإلكتروني ورقم الهاتف هما وسيلة الاتصال الاساسية بعد التفعيل لذا يرجى التأكد من صحتهما </p>
+                                <p class="font-weight-bold required"> البريد الإلكتروني ورقم الهاتف هما وسيلة الاتصال الاساسية بعد التفعيل لذا يرجى التأكد من صحتهما </p>
+                                <p class="font-weight-bold required"> البريد الإلكتروني ورقم الهاتف هما وسيلة الاتصال الاساسية بعد التفعيل لذا يرجى التأكد من صحتهما </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form>
+                        <div class="row mt45">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="UserType" class="required control-label font-bold font-medium w-100 text-right">فئة المستخدم : </label>
+                                    <select id="UserType" class="form-control">
+                                    <option>  --إختار-- </option>
+                                    <option value="Emp"> فرد </option>
+                                    <option value="Corp"> منشأه </option>
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-6 corportaion">
+                                <div class="form-group">
+                                    <label for="CorpN" class="required control-label font-bold font-medium w-100 text-right">رقم المنشأة  : </label>
+                                    <input type="text" id="CorpN" class="form-control  ">
+                                </div>
+                            </div>
+                            <div class="col-6 empolyee">
+                                <div class="form-group">
+                                    <label for="name" class="required control-label font-bold font-medium w-100 text-right">الرقم الشخصي القطري : </label>
+                                    <input type="text" id="name" class="form-control  ">
+                                </div>
+                            </div>
+
+                            <div class="col-6 empolyee ">
+                                <div class="form-group">
+                                    <label for="name" class="required control-label font-bold font-medium w-100 text-right">تاريخ الميلاد : </label>
+                                    <div class="input-group ">
+                                        <input type='text' class="form-control" id='datepicker' placeholder='Select Date'>
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="Email" class="required control-label font-bold font-medium w-100 text-right">البريد الالكتروني : </label>
+                                    <input type="email" id="Email" class="form-control " disabled>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="form-group">
+                                    <label for="name" class=" required control-label font-bold font-medium w-100 text-right">رقم الجوال : </label>
+                                    <input type="text" id="name" class="form-control ">
+                                </div>
+                            </div>
+
+                            <div class="col-6 empolyee ">
+                                <div class="form-group">
+                                    <label for="Nationality" class="required control-label font-bold font-medium w-100 text-right">فئة الجنسية : </label>
+                                    <select id="Nationality" class="form-control">
+                                        <option>  --إختار-- </option>
+                                        <option value=" Emp"> قطري  </option>
+                                        <option value="Corp"> غير قطري </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12 ">
+                                <div class="form-group ">
+
+                                    <label for="name " class="required control-label font-bold font-medium w-100 text-right ">كلمة  المرور : </label>
+                                    <input type="password" id="name " class="form-control ">
+                                </div>
+                            </div>
+
+                            <div class="col-12 ">
+                                <div class="form-group ">
+                                    <label for="name " class="required control-label font-bold font-medium w-100 text-right ">تأكيد كلمة المرور : </label>
+                                    <input type="password" id="name " class=" required form-control ">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="row mt-5 ">
+                        <div class="col-12 text-center ">
+                            <div class="actions ">
+                                <button class="btn-lg float-right btn-submit ">إلغاء</button>
+                                <button data-toggle="modal" data-target="#RejesterSuccess" class="btn-lg float-left btn-submit ">التسجيل</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+    <div class="modal fade" id="RejesterSuccess" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title fg-black"> عزيزي العميل</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="fg-success text-right">تم إرسال طلب تسجيلك بنجاح , يرجى متابعة حالة الطلب بأستمرار.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a type="button" class="btn default-btn" href="activationCode.html">إغلق</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <script src="Js/jquery-3.4.1.slim.min.js "></script>
+                <script src="js/popper.min.js "></script>
+                <script src="js/bootstrap.min.js "></script>
+                <script src='js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+                <script>
+                    $('#datepicker').datepicker();
+
+                    $('.empolyee').hide();
+                    $('.corportaion').hide()
+                    $('#UserType').change(function() {
+                        $('#Email').removeAttr("disabled ");
+
+                        var UserType = $(this).children("option:selected ").val();
+                        console.log(UserType);
+                        //debugger;
+                        if (UserType == "Emp") {
+                            $('.empolyee').show();
+                            $('.corportaion').hide();
+                        } else if (UserType == "Corp") {
+
+                            // alert("Corpotation ")
+                            $('.empolyee').hide();
+                            $('.corportaion').show();
+                        } else {
+                            $('.empolyee').hide();
+                            $('.corportaion').hide();
+                        }
+                    })
+                </script>
+</body>
+
+</html>

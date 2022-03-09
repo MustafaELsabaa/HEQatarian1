@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="DataTables/datatables.min.css" />
+    <link href='css/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+
+    <!-- Optional theme -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row margin-top-15 ">
+                <div class="col-12 text-left">
+                    <nav class="navbar navbar-expand-lg toaddwithwelcome">
+                        <div class="dropdown UserMenu">
+                            <button class="dropdown-toggle" id="dropdownUserMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownUserMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">الخروج من الموقع</a>
+                            </div>
+                        </div>
+
+                        <a class="navbar-brand" href="#"><span class="Welcome_Dear align-text-bottom text-white">مرحبا
+                                بك أحمد </span></a>
+                        <!-- <a title="" data-toggle="tooltip" class="btn btn-black fg-white" href="addingRequest.html">
+                        </a> -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="moe-logo" href="#"><img class=" logo" src="img/moe-logo.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="lang-btn">
+                    <input type="hidden" name="ctl00$ctl75$hdnVarLabel" id="ctl00_ctl75_hdnVarLabel" value="en">
+                    <a id="ctl00_ctl75_lnkbtn_Language" class="lang font-weight-bold fg-black test" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl75$lnkbtn_Language&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">English</a>
+
+                </li>
+                <li class="access-icons flex-display">
+                    <a class="access-theme fg-white" onclick="inverseColors();return false">
+                    </a>
+                    <a class="decrease-font fg-white" onclick="decreaseFont();return false">
+
+                    </a>
+                    <a class="main-font fg-white" onclick="setdefaultFont();return false">
+
+                    </a>
+                    <a class="increase-font fg-white" onclick="increaseFont();return false">
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <main>
+        <div class="container-fluid  mb-5 bg-white height-100">
+
+            <div class="row text-center mt-5 mb-3">
+                <div class="col-12 no-padding">
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link  " href="#a">
+                            <div class="circleWizardDiv ">
+                                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                            </div>
+                            <label for=""> الشروط والاحكام </label>
+                            <div class="dashAfter"></div>
+                        </a>
+                        <a class="nav-item nav-link  " href="#a">
+                            <div class="circleWizardDiv "> <i class="fa fa-university" aria-hidden="true"></i> </div>
+                            <label for=""> بيانات المؤسسة </label>
+                            <div class="dashBefore"></div>
+
+                            <div class="dashAfter"></div>
+                        </a>
+                        <a class="nav-item nav-link " href="#a">
+
+                            <div class="circleWizardDiv"> <i class="fa fa-building " aria-hidden="true"></i> </div>
+                            <label for=""> بيانات الكليات </label>
+
+                            <div class="dashBefore"></div>
+                            <div class="dashAfter"></div>
+                        </a>
+                        <a class="nav-item nav-link " href="#a">
+                            <div class="circleWizardDiv"> <i class="fa fa-tasks " aria-hidden="true"></i> </div>
+                            <label for=""> بيانات البرامج</label>
+
+
+                            <div class="dashBefore"></div>
+                            <div class="dashAfter"></div>
+                        </a>
+                        <a class="nav-item nav-link " href="#a">
+                            <div class="circleWizardDiv"> <i class="fa fa-sitemap " aria-hidden="true"></i> </div>
+                            <label for=""> بيانات المؤسسات  الشريكة
+                            </label>
+
+                            <div class="dashBefore"></div>
+                            <div class="dashAfter"></div>
+                        </a>
+                        <a class="nav-item nav-link active" href="#a">
+                            <div class="circleWizardDiv"> <i class="fa fa-user-plus" aria-hidden="true"></i> </div>
+                            <label for=""> بيانات المستثمرين
+                            </label>
+
+                            <div class="dashBefore"></div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-12 no-padding margin-top-15">
+                    <div class="row  my-3 PT-34 pr-0">
+                        <div class="col-6 ">
+                            <h5 class="  float-right text-right fg-red"> بإمكانك حفظ الطلب واستكماله لاحقا
+                            </h5>
+                        </div>
+
+
+                        <div class="col-6 text-left">
+                            <button href="#a" data-toggle="modal" data-target="#DataSaved" class="btn default-btn">حفظ مسودة </button>
+
+                            <a href="#a" class="btn btn-secondary">إلغاء الطلب</a>
+                        </div>
+                    </div>
+
+
+                    <div class="row  py-3 mt-3 text-right bg-light border position-relative ">
+                        <div class="col-12">
+                            <h5 class=" position-absolute text-right fg-primary mb-3"> بيانات المستثمرين</h5>
+
+                            <div class="row">
+                                <div class="col-3 margin-top-15">
+                                    <label for="Gende2r2" class="required  control-label full_width full_width">
+                                        نوع المستثمر </label>
+                                    <select class="form-control" id="NewCorpType">
+                                        <option selected>إختـر</option>
+                                        <option value="1">فرد</option>
+                                        <option value="2">شركة</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row Emp">
+                                <div class="col-3 margin-top-15 ">
+                                    <label for="MoNo" class="required  control-label full_width dimmed">
+                                        إسم
+                                        المستثمر </label>
+                                    <input type="text" id="MoNo" class="form-control">
+                                </div>
+
+                                <div class="col-3 margin-top-15">
+                                    <label for="Gende2r2" class="required  control-label full_width full_width">
+                                        الجنسية </label>
+                                    <select class="form-control" id="Gende2r2">
+                                        <option selected>إختـر</option>
+                                        <option value="1">قطر</option>
+                                        <option value="2">الكويت</option>
+                                    </select>
+                                </div>
+                                <div class="col-3 margin-top-15">
+                                    <label for="CompanyType" class="required  control-label full_width ">البريد
+                                        الالكتروني
+                                    </label>
+                                    <input type="text" id="CompanyType" class="form-control ">
+                                </div>
+                                <div class="col-3 margin-top-15">
+                                    <label for="LandNo" class="required control-label full_width ">رقم
+                                        الهاتف
+                                    </label>
+                                    <input type="text" id="LandNo" class="form-control ">
+                                </div>
+                                <div class="col-3 margin-top-15">
+                                    <label for="CompanyAdd" class="required control-label full_width ">الرقم الشخصي /
+                                        الجواز
+
+                                    </label>
+                                    <input type="text" id="CompanyAdd" class="form-control ">
+                                </div>
+                                <div class="col-3 margin-top-15 ">
+                                    <label for="IDNo" class="required control-label full_width ">شهادة حسن سير وسلوك
+
+                                    </label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                        <label class="custom-file-label" for="inputGroupFile02">
+                                            <button class="btn default-btn">
+                                                <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                            </button></label>
+
+                                    </div>
+                                </div>
+                                <div class="col-1 d-flex align-items-end margin-top-15 ">
+                                    <input type="submit" class=" btn btn-secondary" value="تحميل ">
+                                </div>
+                                <div class="col-3 margin-top-15">
+                                    <label for="EmailNo" class="required  control-label full_width ">البريد
+                                        الالكتروني </label>
+                                    <input type="text" id="EmailNo" class="form-control ">
+                                </div>
+                                <div class="col-12 margin-top-15 clearfix position-relative ">
+                                    <label for="executiveٍummary" class="required  control-label full_width ">شرح لأعمال
+                                        المستثمر
+
+                                    </label>
+                                    <textarea class="form-control" id="executiveٍummary" cols="120" rows="10"></textarea>
+                                    <!-- <button class=" btn View_btn  border-red fg-red btn-outline-secondary position-absolute" value="View"> view </button> </div> -->
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="row corp">
+                                <div class="col-4 margin-top-15 ">
+                                    <label for="MoNo" class="required  control-label full_width dimmed">
+                                        إسم
+                                        المؤسسة الشريكة بالعربي
+                                    </label>
+                                    <input type="text" id="MoNo" class="form-control">
+                                </div>
+                                <div class="col-4 margin-top-15 ">
+                                    <label for="MoNoA" class="required  control-label full_width dimmed">
+                                        إسم
+                                        المؤسسة الشريكة بالانجليزية
+                                    </label>
+                                    <input type="text" id="MoNoA" class="form-control">
+                                </div>
+                                <div class="col-4 margin-top-15">
+                                    <label for="Gende2r2" class="required  control-label full_width full_width">
+                                        دولة المقر
+                                    </label>
+                                    <select class="form-control" id="Gende2r2">
+                                        <option selected>إختـر</option>
+                                        <option value="1">قطر</option>
+                                        <option value="2">الكويت</option>
+                                    </select>
+                                </div>
+                                <div class="col-4 margin-top-15">
+                                    <label for="CompanyType" class="required  control-label full_width ">نوع
+                                        المؤسسة
+                                    </label>
+                                    <input type="text" id="CompanyType" class="form-control ">
+                                </div>
+                                <div class="col-4 margin-top-15">
+                                    <label for="LandNo" class="required control-label full_width ">رقم
+                                        الهاتف
+                                    </label>
+                                    <input type="text" id="LandNo" class="form-control ">
+                                </div>
+                                <div class="col-4 margin-top-15">
+                                    <label for="CompanyAdd" class="required control-label full_width ">عنوان
+                                        المؤسسة
+                                    </label>
+                                    <input type="text" id="CompanyAdd" class="form-control ">
+                                </div>
+                                <div class="clear"></div>
+                                <div class="col-4 margin-top-15 ">
+                                    <label for="IDNo" class="required control-label full_width ">رقم
+                                        السجل
+                                    </label>
+                                    <input type="text" id="IDNo" class="form-control ">
+                                </div>
+                                <div class="col-4 margin-top-15">
+                                    <label for="EmailNo" class="required  control-label full_width ">البريد
+                                        الالكتروني </label>
+                                    <input type="text" id="EmailNo" class="form-control ">
+                                </div>
+                                <div class="col-12 margin-top-15 clearfix position-relative ">
+                                    <label for="executiveٍummary" class="required  control-label full_width ">شرح لأعمال
+                                        المؤسسة المستثمرة
+
+                                    </label>
+                                    <textarea class="form-control" id="executiveٍummary" cols="120" rows="10"></textarea>
+                                    <!-- <button class=" btn View_btn  border-red fg-red btn-outline-secondary position-absolute" value="View"> view </button> </div> -->
+                                </div>
+                                <div class="col-3 margin-top-15 ">
+                                    <label for="IDNo" class="required control-label full_width ">ملف تعريفي                                    </label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                        <label class="custom-file-label" for="inputGroupFile02">
+                                            <button class="btn default-btn">
+                                                <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                            </button></label>
+
+                                    </div>
+                                </div>
+                                <div class="col-1 d-flex align-items-end margin-top-15 ">
+                                    <input type="submit" class=" btn btn-secondary" value="تحميل ">
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12  py-4  text-right">
+
+                                    <a href="#a" class="btn float-left default-btn"> حفظ و إضافة </a>
+
+                                </div>
+
+                                <div class="col-12 mb-5 ">
+                                    <table class="display border nowrap DataTable">
+                                        <thead>
+                                            <tr>
+                                                <th> نوع المستثمر </th>
+
+                                                <th> إسم المستثمر </th>
+                                                <th>الدولة </th>
+
+                                                <th> البريد الالكتروني</th>
+                                                <th>الهاتف</th>
+                                                <th>المرفقات</th>
+                                                <th>الإجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td> فرد</td>
+                                                <td>الامير خالد</td>
+                                                <td>مصر</td>
+
+                                                <td> EienShams@gmail.com</td>
+                                                <td>0222222222</td>
+                                                <td><a href="#a" class="btn btn-outline"> ملف</a></td>
+                                                <td>
+                                                    <a href="#a" class="btn" title=" رؤية المستثمر">
+                                                        <i class="fa fa-eye Delete-btn" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href="#a" class="btn" title="مسح المستثمر ">
+                                                        <i class="fa fa-trash Delete-btn" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href="#a" class="btn" title="نعديل المستثمر ">
+                                                        <i class="fa fa-edit Edit-btn" aria-hidden="true"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> مؤسسة</td>
+                                                <td> التعليم العالي</td>
+                                                <td>قطر</td>
+
+                                                <td> HireEducation@gmail.com</td>
+                                                <td>0333333333</td>
+                                                <td><a href="#a" class="btn btn-outline"> ملف</a></td>
+                                                <td>
+                                                    <a href="#a" class="btn" title=" رؤية المستثمر">
+                                                        <i class="fa fa-eye Delete-btn" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href="#a" class="btn" title="مسح المستثمر ">
+                                                        <i class="fa fa-trash Delete-btn" aria-hidden="true"></i>
+                                                    </a>
+                                                    <a href="#a" class="btn" title="نعديل المستثمر ">
+                                                        <i class="fa fa-edit Edit-btn" aria-hidden="true"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="col-12  mt-3 pt-3 text-left">
+                                    <a href="LicensingEnterprise.html" id="TheprevOne" class="btn float-right default-btn">السابق </a>
+
+                                    <button href="#a" data-toggle="modal" data-target="#RequestIstantiated" class="btn default-btn">إرسال الطلب</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="he-footer page-padding">
+        <div class="lg-footer row margin-top-15 flex-display">
+            <div class="col-1">
+                <h2 class="title text-right">
+                    اتصل بنا
+                </h2>
+            </div>
+            <div class="col-5 no-padding">
+
+
+                <ul class="address text-right no-padding">
+
+                    <li>
+                        <a href="#">
+                            <span>
+                                <i class="fa fa-map-marker" aria-hidden="true">
+                                </i>
+                                الدفنة-الدوحة-قطر
+                            </span>
+                        </a>
+                    </li>
+                    <li class=" text-right number-font">
+                        <span>
+                            <i class="fa fa-envelope-open" aria-hidden="true"></i>P.O. Box 3511
+                        </span>
+                    </li>
+                </ul>
+                <ul class="phones no-padding">
+                    <li class="number-font">
+                        <a href="tel:155">
+                            <span>
+                                <span class="fa">
+                                    <img src="img/hotline.png">
+                                </span> 155 </span>
+                        </a>
+                    </li>
+                    <li class="number-font">
+                        <a href="tel:44044444">
+                            <span>
+                                <i class="fa fa-phone" aria-hidden="true">
+                                </i> 44044444
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="email no-padding no-border">
+                    <li class="number-font">
+                        <a href="tel:44044586">
+                            <span>
+                                <i class="fa fa-fax" aria-hidden="true">
+                                </i> 44044586
+                            </span>
+                        </a>
+                    </li>
+                    <li class="number-font">
+                        <a href="mailto:info@edu.gov.qa">
+                            <span>
+                                <i class="fa fa-envelope-o" aria-hidden="true">
+                                </i> info@edu.gov.qa
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 no-padding">
+                <ul class="links no-padding no-border no-margin">
+                    <li>
+                        <a href="Site Map" class=""> خريطة الموقع </a>
+                    </li>
+
+                    <li>
+                        <a href="اسئلة متكررة" class="">
+                            اسئلة متكررة
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-1 no-padding">
+                <h3 class="title">
+                    إتبعنا </h3>
+            </div>
+            <div class="col-2 no-padding">
+                <div class="flex-display followCopy">
+                    <div class=" text-right">
+                        <ul class="follow-us no-padding no-margin">
+                            <li class="youtube">
+                                <a href="https://www.youtube.com/user/secqatar123/">
+                                    <i class="fa fa-youtube" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="facebook">
+                                <a href="https://business.facebook.com/Qatar.edu/">
+                                    <i class="fa fa-facebook" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/Qatar_edu">
+                                    <i class="fa fa-twitter" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="instagram">
+                                <a href="https://www.instagram.com/Qatar_edu/">
+                                    <i class="fa fa-instagram" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="linkedin">
+                                <a href="https://in.linkedin.com/company/qatar_edu">
+                                    <i class="fa fa-linkedin" aria-hidden="true">
+                                    </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="margin-top-15 copy-right text-right">
+                        <h3>
+                            © حقوق النشر محفوظة 2020
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!--AttachData started-->
+    <div class="modal fade" id="DataSaved" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title fg-black"> عزيزي العميل</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="fg-success text-right">تم حفظ الطلب رقم HEI000501 بنجاع</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn default-btn" data-dismiss="modal">إغلق</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--AttachData Finished-->
+    <!--AttachData started-->
+    <div class="modal fade" id="RequestIstantiated" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title fg-black"> عزيزي العميل</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="fg-success text-right">تم إرسال طلب ترخيص مؤسسة تعليم عالي رقم HEI000500 بنجاح , يرجى متابعة حالة الطلب بأستمرار.</p>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn default-btn" href="addingRequest.html">إغلق</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--AttachData Finished-->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+    <script src="DataTables/datatables.min.js "></script>
+
+    <script src="js/Custom.js"></script>
+    <script>
+        $('.Emp').hide();
+        $('.corp').hide()
+
+        $('#NewCorpType').change(function() {
+            var values = $(this).val()
+            if (values == 1) {
+
+                $('.Emp').show();
+                $('.corp').hide();
+
+            } else {
+                $('.corp').show();
+                $('.Emp').hide();
+
+
+
+            }
+            //alert(values +$('#TheNextOne').attr('href') )
+        })
+    </script>
+</body>
+
+</html>
